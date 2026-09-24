@@ -8,7 +8,7 @@ jobs:
       my_user_name: ${{steps.username.outputs.uname}}
     steps:
       - id: username
-        run: echo 'uname=Toni' >> $GITHUB_OUTPUT
+        run: echo "uname=Toni" >> $GITHUB_OUTPUT
 
   result:
     needs: create-name
@@ -16,5 +16,5 @@ jobs:
     env:
       MY_UNAME: ${{needs.create-name.outputs.my_user_name}}
     steps:
-      - run: echo 'Sinun nimesi on MY_UNAME'
+      - run: echo "Sinun nimesi on MY_UNAME"
          
