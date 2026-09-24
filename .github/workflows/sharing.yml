@@ -9,7 +9,6 @@ jobs:
     steps:
       - id: username
         run: echo 'uname=Toni' >> $GITHUB_OUTPUT
-
   result:
     needs: create-name
     runs-on: ubuntu-latest
