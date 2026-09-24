@@ -10,12 +10,5 @@ jobs:
       - name: dependencies
         run: npm ci
       - name: oxlint
-        run: | 
-            npm run lint > info-lint.md
-      - name: Push-changes
-        run: |
-          git config --global user.name 'tonipekkala24'
-          git config --global user.email 'tpekkala24@students.oamk.fi'
-          git add .
-          git commit -m 'Linting report'
-          git push
+        run: npm run lint
+
