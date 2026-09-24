@@ -12,9 +12,10 @@ jobs:
       - name: oxlint
         run: | 
             npm run lint > info-lint.md
-      - name: Commit-changes
+      - name: Push-changes
         run: |
           git config --global user.name 'tonipekkala24'
           git config --global user.email 'tpekkala24@students.oamk.fi'
           git add .
           git commit -m 'Linting report'
+          git push
