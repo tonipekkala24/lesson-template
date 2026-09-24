@@ -5,8 +5,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@7
+      - uses: actions/checkout@v7
       - name: dependencies
         run: npm ci
       - name: moduletests
-        run: npm 
+        run: npm test
+      - name: test_outcome
+        if: ${{success()}}
+        run: echo "Test was successfull!!"
